@@ -42,4 +42,4 @@ $person = new Person(22,"man", "Harry");
 $person->say();
 
 
-
+$a =20;
