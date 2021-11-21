@@ -1,34 +1,40 @@
 <?php
 
-class Human {
-	public $age ;
-	protected $gender;
-	private $name;
+class Human
+{
+	public int $age;
+	protected string $gender;
+	private string $name;
 
-	function getName () {
+	function getName(): string
+	{
 		return $this->name;
 	}
 
-	function setName ($name) : string {
+	function setName(string $name): string
+	{
 		return $this->name = $name;
 	}
 
-	function say() {
+	function say(): void
+	{
 		echo "Hello!!!";
 	}
 }
 
-class Person extends Human{
+class Person extends Human
+{
 
-	function __construct($age, $gender, $name)
+	function __construct(int $age, string $gender, string $name)
 	{
-		$this->age = (int)$age;
-		$this->gender = (string)$gender;
+		$this->age = $age;
+		$this->gender = $gender;
 		$this->name = $this->setName($name);
 	}
 
 
-	function say() {
+	function say(): void
+	{
 		echo " Hello, my name is $this->name. I am $this->gender. A am $this->age old.";
 	}
 }
@@ -38,8 +44,8 @@ $human->say();
 
 echo "<br>";
 
-$person = new Person(22,"man", "Harry");
+$person = new Person(22, "man", "Harry");
 $person->say();
 
 
-$a =20;
+$a = 20;
