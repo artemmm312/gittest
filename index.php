@@ -36,6 +36,7 @@ class Person extends Human
 	function say(): void
 	{
 		echo " Hello, my name is $this->name. I am $this->gender. A am $this->age old.";
+		Human::say();
 	}
 }
 
@@ -47,5 +48,3 @@ echo "<br>";
 $person = new Person(22, "man", "Harry");
 $person->say();
 
-
-$a = 20;
